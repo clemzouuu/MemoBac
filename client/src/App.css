@@ -1,0 +1,351 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; 
+}
+
+.homePageVideo {
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  z-index: -1;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: bold; 
+  letter-spacing: -0.1em; 
+  margin: 0.5% 0 0 2%;
+  position: absolute;
+  top: 0%;
+  z-index: 2;
+}
+
+.moto{
+  font-size: 3em; 
+  letter-spacing: -0.1em; 
+  margin: 0.5% 0 0 2%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 2% 2%;
+}
+
+.visitButton{
+  cursor: pointer;
+  position: absolute; 
+  right: 0;
+  top: 0;
+  margin: 1% 2% 0 0;
+  font-size: 1em;
+  height: 5vh;
+  width: 7vw;
+  border-radius: 10px;
+  border: none; 
+  background-color: #F5F5E6;
+  transition: background-color .5s, color .5s; 
+  z-index: 2;
+}
+
+.visitButton:hover{
+  cursor: pointer;
+  position: absolute; 
+  right: 0;
+  top: 0;
+  margin: 1% 2% 0 0;
+  font-size: 1em;
+  height: 5vh;
+  width: 7vw;
+  border-radius: 10px;
+  border: none; 
+  background-color: black;
+  color: white;
+}
+
+.mainButton{
+  cursor: pointer;
+  margin: 1% 2% 0 0;
+  font-size: 1em;
+  height: 4.5vh; 
+  border-radius: 10px;
+  border: none; 
+  background-color: #F5F5E6;
+  transition: background-color .5s, color .5s; 
+  z-index: 2;
+}
+
+.addButton{
+  cursor: pointer;
+  margin: 1% 2% 0 1%;
+  font-size: 1em;
+  height: 4vh; 
+  border-radius: 10px;
+  border: none; 
+  background-color: #F5F5E6;
+  transition: background-color .5s, color .5s; 
+  z-index: 2;
+  width: 40px;
+}
+
+.deleteButton{
+  cursor: pointer;
+  margin: 1% 2% 0 1%;
+  font-size: 1em;
+  height: 4vh; 
+  border-radius: 10px;
+  border: none; 
+  background-color: #F5F5E6;
+  transition: background-color .5s, color .5s; 
+  z-index: 2;
+  width: 60px;
+}
+
+.mainButton:hover{
+  cursor: pointer;
+  margin: 1% 2% 0 0;
+  font-size: 1em;
+  height: 4.5vh; 
+  border-radius: 10px;
+  border: none; 
+  background-color: black;
+  color: white;
+}
+
+.addButton:hover, .deleteButton:hover{
+  cursor: pointer;
+  margin: 1% 2% 0 1%;
+  font-size: 1em;
+  height: 4vh; 
+  border-radius: 10px;
+  border: none; 
+  background-color: black;
+  color: white;
+}
+
+.whiteCoverageDiv {
+  background-color: white;
+  height: 45vh;
+  width: 100vw;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  z-index: 1;  
+  transform: translateY(-100%);  
+  transition: transform 1s ease;  
+  padding-top: 4%; 
+  opacity: .9;
+}
+
+.whiteCoverageDiv.active {
+  transform: translateY(0);  
+}
+
+.hr {
+  width: 98%;
+}
+
+.LogInSignUpDiv{
+  margin-left: 2%;
+}
+
+.createAccount{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.createAccount:hover{
+  text-decoration: underline;
+  font-weight: bold; 
+}
+
+.text-with-newlines {
+  white-space: pre-line;
+}
+
+.hrAccount{
+  margin: 0%;
+  width: 11%;
+}
+
+.inputPassword, .inputUsername, .selectSubscription{
+  margin-bottom: 4vh;
+  height: 4vh;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #757575;
+  width: 16vw; 
+  border-bottom: 1px solid black;
+}
+
+.formInput{
+  margin-bottom: 2vh;
+  height: 4vh;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #757575;
+  width: 16vw; 
+  border-bottom: 1px solid black;
+}
+
+.inputPassword:focus, .inputUsername:focus, .selectSubscription:focus, .formInput:focus{
+  outline: none; 
+}
+
+.spaceDiv{
+  height: 3vh;
+}
+
+.error{
+  color: red;
+  font-size: 1.2em;
+}
+
+.spinner {
+  border: 16px solid  #F5F5E6; 
+  border-top: 16px solid black;
+  border-bottom: 16px solid black;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin .4s linear infinite;
+  position: absolute;
+  top: 40vh;
+  left: 47vw;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logo{
+  font-size: 3em;
+  font-weight: bold; 
+  letter-spacing: -0.1em; 
+  margin: 0%;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1% 7% 0% 2%;
+}
+.navBarButtons{
+  display: flex;
+}
+
+.appSection{
+  margin-left: 2%;
+}
+
+.redText{
+  color: red;
+  text-decoration: underline;
+}
+
+input[type=file] {
+  opacity: 1;
+}
+
+.spanFile{  
+  margin-bottom: 2vh;
+  height: 4vh;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  font-size: 1.3em;
+  color: #757575;
+  width: 16vw; 
+  border-bottom: 1px solid black;
+  margin-top: 0%;
+}
+
+.spanFile input {
+  position: relative;
+  top: -24px;
+  height: 4vh;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.spanFile input:hover, spanFile:hover{
+  cursor: pointer;
+}
+
+.acceptCGUText{
+  margin-bottom: 2vh;
+  height: 4vh; 
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #757575;
+  width: 16vw;  
+}
+
+.selectForm{
+  margin-bottom: 2vh;
+  height: 4vh;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #757575;
+  width: 16vw; 
+  border-bottom: 1px solid black;
+}
+
+.acceptGCU {
+  appearance: none;
+  height: 20px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  top: .5vh;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.whiteTitle{
+  color: #F5F5E6;
+  transition: color .5s; 
+}
+ 
+.blackTitle{
+  color: black;
+  transition: color .5s; 
+}
