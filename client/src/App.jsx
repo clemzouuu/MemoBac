@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import WhiteCoverage from './Auth/WhiteCoverage'
+import WhiteCoverage from './context/WhiteCoverage'
 import './App.css'
 
 function App() {

@@ -1,0 +1,81 @@
+| #  | Fonctionnalité                               | Méthode HTTP | Route                           | Corps de la requête (si nécessaire)                          | Explication / Valeur ajoutée                          |
+|----|---------------------------------------------|-------------|--------------------------------|--------------------------------------------------------------|--------------------------------------------------------|
+| 1  | 📋 Récupérer toutes les cartes              | GET         | /cards                         | (Query param : ?tags=tag1,tag2 optionnel)                    | ✅ Route existante                                    |
+| 2  | 🆕 Créer une nouvelle carte                 | POST        | /cards                         | { "question": "Qu'est-ce que DDD ?", "answer": "...", "tag": "Architecture" } | ✅ Route existante            |
+| 3  | 📅 Récupérer les cartes du quiz             | GET         | /cards/quizz                   | (Query param : ?date=YYYY-MM-DD optionnel)                    | ✅ Route existante                                    |
+| 4  | ✅ Répondre à une carte                     | PATCH       | /cards/{cardId}/answer         | { "isValid": true } ou { "isValid": false }                  | ✅ Route existante                                    |
+| 5  | 🏷️ Filtrer les cartes par tag et catégorie | GET         | /cards                         | (Query param : ?tags=Architecture&category=FIRST)             | 🔥 Permet de filtrer par tag + catégorie             |
+| 6  | 🗑️ Supprimer une carte                     | DELETE      | /cards/{cardId}                | (Aucun)                                                      | 🔥 Permet aux utilisateurs de supprimer une carte    |
+| 7  | ✏️ Modifier une carte                      | PUT         | /cards/{cardId}                | { "question": "...", "answer": "...", "tag": "..." }         | 🔥 Permet de mettre à jour une carte existante       |
+| 8  | 📈 Obtenir les statistiques d’apprentissage | GET         | /stats                         | (Aucun)                                                      | 🔥 Affiche des stats : progression, cartes réussies, etc. |
+| 9  | 🕒 Limiter un quiz par jour                | GET         | /cards/quizz                   | (Aucun)                                                      | 🔥 Empêche un utilisateur de faire plusieurs quiz/jour |
+| 10 | 🔐 Inscription d’un utilisateur            | POST        | /register                      | { "username": "testuser", "password": "Test@123" }          | 🔥 Ajoute un système de gestion des utilisateurs     |
+| 11 | 🔑 Connexion et obtention du JWT           | POST        | /login                         | { "username": "testuser", "password": "Test@123" }          | 🔥 Permet l’authentification avec JWT                |
+| 12 | 🔄 Récupérer l’historique des réponses     | GET         | /users/{userId}/history        | (Aucun)                                                      | 🔥 Affiche toutes les réponses données par un utilisateur |
+| 13 | 📝 Récupérer les cartes mal répondues      | GET         | /users/{userId}/mistakes       | (Aucun)                                                      | 🔥 Affiche les cartes où l’utilisateur s’est trompé souvent |
+| 14 | 🔔 Notification pour le quiz du jour       | GET         | /notifications/reminder        | (Aucun)                                                      | 🔥 Système de rappel pour réviser ses cartes        |
+| 15 | 🔑 Vérifier un token JWT                   | GET         | /auth/verify                   | (Header : Authorization: Bearer token)                      | 🔥 Permet de vérifier si un utilisateur est connecté |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Voici ton tableau exporté au format Markdown :
+
+📌 Routes à implémenter
+markdown
+Copier
+Modifier
+| #  | Fonctionnalité                               | Méthode HTTP | Route                           | Corps de la requête (si nécessaire)                          | Explication / Valeur ajoutée                          |
+|----|---------------------------------------------|-------------|--------------------------------|--------------------------------------------------------------|--------------------------------------------------------|
+| 1  | 📋 Récupérer toutes les cartes              | GET         | /cards                         | (Query param : ?tags=tag1,tag2 optionnel)                    | ✅ Route existante                                    |
+| 2  | 🆕 Créer une nouvelle carte                 | POST        | /cards                         | { "question": "Qu'est-ce que DDD ?", "answer": "...", "tag": "Architecture" } | ✅ Route existante            |
+| 3  | 📅 Récupérer les cartes du quiz             | GET         | /cards/quizz                   | (Query param : ?date=YYYY-MM-DD optionnel)                    | ✅ Route existante                                    |
+| 4  | ✅ Répondre à une carte                     | PATCH       | /cards/{cardId}/answer         | { "isValid": true } ou { "isValid": false }                  | ✅ Route existante                                    |
+| 5  | 🏷️ Filtrer les cartes par tag et catégorie | GET         | /cards                         | (Query param : ?tags=Architecture&category=FIRST)             | 🔥 Permet de filtrer par tag + catégorie             |
+| 6  | 🗑️ Supprimer une carte                     | DELETE      | /cards/{cardId}                | (Aucun)                                                      | 🔥 Permet aux utilisateurs de supprimer une carte    |
+| 7  | ✏️ Modifier une carte                      | PUT         | /cards/{cardId}                | { "question": "...", "answer": "...", "tag": "..." }         | 🔥 Permet de mettre à jour une carte existante       |
+| 8  | 📈 Obtenir les statistiques d’apprentissage | GET         | /stats                         | (Aucun)                                                      | 🔥 Affiche des stats : progression, cartes réussies, etc. |
+| 9  | 🕒 Limiter un quiz par jour                | GET         | /cards/quizz                   | (Aucun)                                                      | 🔥 Empêche un utilisateur de faire plusieurs quiz/jour |
+| 10 | 🔐 Inscription d’un utilisateur            | POST        | /register                      | { "username": "testuser", "password": "Test@123" }          | 🔥 Ajoute un système de gestion des utilisateurs     |
+| 11 | 🔑 Connexion et obtention du JWT           | POST        | /login                         | { "username": "testuser", "password": "Test@123" }          | 🔥 Permet l’authentification avec JWT                |
+| 12 | 🔄 Récupérer l’historique des réponses     | GET         | /users/{userId}/history        | (Aucun)                                                      | 🔥 Affiche toutes les réponses données par un utilisateur |
+| 13 | 📝 Récupérer les cartes mal répondues      | GET         | /users/{userId}/mistakes       | (Aucun)                                                      | 🔥 Affiche les cartes où l’utilisateur s’est trompé souvent |
+| 14 | 🔔 Notification pour le quiz du jour       | GET         | /notifications/reminder        | (Aucun)                                                      | 🔥 Système de rappel pour réviser ses cartes        |
+| 15 | 🔑 Vérifier un token JWT                   | GET         | /auth/verify                   | (Header : Authorization: Bearer token)                      | 🔥 Permet de vérifier si un utilisateur est connecté |
+📌 Tableau des tests API
+markdown
+Copier
+Modifier
+| #  | Fonctionnalité                               | Méthode HTTP | Route                           | Corps de la requête (si nécessaire)                          | Attendu                                              |
+|----|---------------------------------------------|-------------|--------------------------------|--------------------------------------------------------------|------------------------------------------------------|
+| 1  | 🆕 Inscription d’un utilisateur            | POST        | /register                      | { "username": "testuser", "password": "Test@123" }          | 201 Created + utilisateur créé                      |
+| 2  | 🔐 Connexion et obtention du JWT           | POST        | /login                         | { "username": "testuser", "password": "Test@123" }          | 200 OK + { "token": "JWT_TOKEN" }                  |
+| 3  | 📋 Création d’une carte                    | POST        | /cards                         | { "question": "Qu'est-ce que DDD ?", "answer": "...", "tag": "Architecture" } | 201 Created + carte créée                          |
+| 4  | 📄 Récupération de toutes les cartes       | GET         | /cards                         | (Aucun)                                                      | 200 OK + Liste des cartes                          |
+| 5  | 🔎 Récupérer les cartes avec un tag        | GET         | /cards?tags=Architecture       | (Aucun)                                                      | 200 OK + Liste des cartes filtrées                 |
+| 6  | ❓ Récupérer les cartes du quiz du jour    | GET         | /cards/quizz                   | (Aucun)                                                      | 200 OK + Liste des cartes du jour                  |
+| 7  | ✅ Répondre à une carte (bonne réponse)    | PATCH       | /cards/{cardId}/answer         | { "isValid": true }                                          | 204 No Content + Mise à jour de la carte          |
+| 8  | ❌ Répondre à une carte (mauvaise réponse) | PATCH       | /cards/{cardId}/answer         | { "isValid": false }                                         | 204 No Content + Carte repassée en catégorie 1    |
+| 9  | 🚀 Vérifier la mise à jour des catégories  | GET         | /cards/{cardId}                | (Aucun)                                                      | 200 OK + Vérification de la catégorie mise à jour |
+| 10 | 🏷️ Ajouter un tag à une carte             | PATCH       | /cards/{cardId}                | { "tag": "NouveauTag" }                                      | 204 No Content + Mise à jour du tag               |
+| 11 | 🗑️ Supprimer une carte                    | DELETE      | /cards/{cardId}                | (Aucun)                                                      | 204 No Content + Carte supprimée                   |
+| 12 | 🔄 Vérifier la fréquence des révisions    | GET         | /cards/quizz?date=YYYY-MM-DD   | (Aucun)                                                      | 200 OK + Liste des cartes à réviser               |
+| 13 | 🕒 Limitation : Un seul quiz par jour      | GET         | /cards/quizz                   | (Aucun)                                                      | 403 Forbidden si déjà fait                        |
+| 14 | 🔐 Tester une route protégée sans JWT     | GET         | /cards/quizz                   | (Aucun)                                                      | 401 Unauthorized                                  |
+| 15 | 📛 Tester une route protégée avec JWT invalide | GET    | /cards/quizz                   | (JWT erroné)                                                 | 403 Forbidden                                    |
