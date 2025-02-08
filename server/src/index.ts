@@ -6,7 +6,7 @@ import cardRoutes from "./infrastructure/routes/cardRoutes";
 
 
 const app = express();
-const port = 3001;  
+const port = 8080;  // port which the API serves
 
 app.use(cors());
 app.use(express.json());
