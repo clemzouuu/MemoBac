@@ -3,7 +3,12 @@
 ## Requirements
 Make sure to have Docker installed on your machine.
 
-## Step 1: Run the Server
+## Step 1: Clone the repository
+```shell
+git clone https://github.com/clemzouuu/MemoBac.git
+```
+
+## Step 2: Run the Server
 
 1. **Create and start a MySQL Database** (it will work with the server)
     ```shell
