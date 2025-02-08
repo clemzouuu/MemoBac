@@ -13,14 +13,14 @@ services:
       - mysql-data:/var/lib/mysql
     restart: unless-stopped
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    ports:
-      - "8080:80"
-    depends_on:
-      - mysql-db
-    environment:
-      - PMA_HOST=mysql-db
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin:latest
+#    ports:
+#      - "8080:80"
+#    depends_on:
+#      - mysql-db
+#    environment:
+#      - PMA_HOST=mysql-db
 volumes:
   mysql-data:
     driver: local
