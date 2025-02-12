@@ -1,6 +1,8 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { Card } from "../../domain/entities/Card"; 
+import { User } from "../../domain/entities/User"; 
+import { Quiz } from "../../domain/entities/Quiz"; 
 
 export const AppDataSource = new DataSource({
   type: "mysql",
@@ -11,6 +13,6 @@ export const AppDataSource = new DataSource({
   database: "your_database",
   logging: true,
   synchronize: true,
-  entities: [Card ],
+  entities: [Card,User,Quiz],
   migrations: ["src/infrastructure/database/migrations/*.ts"],
 });

@@ -18,12 +18,19 @@ export class Card {
   @Column({ type: "enum", enum: Category, default: Category.FIRST })
   category: Category;
 
-  constructor(id: string, question: string, answer: string, category: Category, tag?: string) {
+  @Column({ type: "date", nullable: true })  
+  nextReviewDate?: Date;
+
+  @Column()
+  userId:string;
+
+  constructor(id: string, question: string, answer: string, category: Category, userId:string, tag?: string) {
     this.id = id;
     this.question = question;
     this.answer = answer;
     this.category = category;
     this.tag = tag;
+    this.userId = userId;
   }
 }
  
