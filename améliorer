@@ -47,8 +47,8 @@ Modifier
 |----|---------------------------------------------|-------------|--------------------------------|--------------------------------------------------------------|--------------------------------------------------------|
 | 1  | 📋 Récupérer toutes les cartes              | GET         | /cards                         | (Query param : ?tags=tag1,tag2 optionnel)                    | ✅ Route existante                                    |
 | 2  | 🆕 Créer une nouvelle carte                 | POST        | /cards                         | { "question": "Qu'est-ce que DDD ?", "answer": "...", "tag": "Architecture" } | ✅ Route existante            |
-| 3  | 📅 Récupérer les cartes du quiz             | GET         | /cards/quizz                   | (Query param : ?date=YYYY-MM-DD optionnel)                    | ✅ Route existante                                    |
-| 4  | ✅ Répondre à une carte                     | PATCH       | /cards/{cardId}/answer         | { "isValid": true } ou { "isValid": false }                  | ✅ Route existante                                    |
+| 3  | 📅 Récupérer les cartes du quiz             | GET         | /cards/quizz                   | (Query param : ?date=YYYY-MM-DD optionnel)                    |                                    |
+| 4  | ✅ Répondre à une carte                     | PATCH       | /cards/{cardId}/answer         | { "isValid": true } ou { "isValid": false }                  |  |
 | 5  | 🏷️ Filtrer les cartes par tag et catégorie | GET         | /cards                         | (Query param : ?tags=Architecture&category=FIRST)             | 🔥 Permet de filtrer par tag + catégorie             |
 | 6  | 🗑️ Supprimer une carte                     | DELETE      | /cards/{cardId}                | (Aucun)                                                      | 🔥 Permet aux utilisateurs de supprimer une carte    |
 | 7  | ✏️ Modifier une carte                      | PUT         | /cards/{cardId}                | { "question": "...", "answer": "...", "tag": "..." }         | 🔥 Permet de mettre à jour une carte existante       |
