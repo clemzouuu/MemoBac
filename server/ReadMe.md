@@ -88,9 +88,9 @@ POST http://localhost:8080/cards
 - Body
 ```json
 {
-    "question": "What is life?",
-    "answer": "When something moves",
-    "tag": "life"
+    "question": "What is the meaning of life ?",
+    "answer": "pizza",
+    "tag": "goal"
 }
 ```
 
@@ -187,9 +187,23 @@ PATCH http://localhost:8080/cards/a98516dd-22ae-477c-a379-faf89c9656d6/answer
 
 - Token: required
 
-
-
 --- 
+
+
+## Summary of all routes implemented
+
+| Feature                     | HTTP Method | Route                          | Request Body (if needed)                                          | Authentication |
+|---------------------------- |-------------|--------------------------------|-------------------------------------------------------------------|----------------|
+| 📝 Register a new user      | POST        | /auth/register                 | { "username": "johndoe", "password": "pwd" }                      | ❌ No          |
+| 🔑 Login                    | POST        | /auth/login                    | { "username": "johndoe", "password": "pwd" }                      | ❌ No          |
+| ➕ Create a new card        | POST        | /cards                         | { "question": "Why?", "answer": "Because", "tag": "existential" } | ✅ Yes         |
+| 📋 Retrieve all cards       | GET         | /cards                         | -                                                                 | ✅ Yes         |
+| 🔍 Get cards by tag         | GET         | /cards/tags/life               | -                                                                 | ✅ Yes         |
+| ✏️ Update a card’s tag      | PATCH       | /cards/{cardId}/tag            | -                                                                 | ✅ Yes         |
+| 🎯 Start a quiz             | GET         | /cards/quizz                   | -                                                                 | ✅ Yes         |
+| ❌ Wrong answer to a card   | PATCH       | /cards/{cardId}/answer         | { "isValid": false }                                              | ✅ Yes         |
+| ✅ Correct answer to a card | PATCH       | /cards/{cardId}/answer         | { "isValid": true }                                               
+
 
 ## Error Handling
 - **Custom error middleware** is used to handle errors and send appropriate responses.
