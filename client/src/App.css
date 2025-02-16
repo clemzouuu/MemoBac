@@ -35,3 +35,24 @@
 .card-form button:hover {
     opacity: 0.9;
 }
+
+.quiz-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.quiz-progress {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quiz-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.quiz-card textarea {
+    width
