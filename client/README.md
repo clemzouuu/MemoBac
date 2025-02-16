@@ -88,10 +88,10 @@ React 18
 
 ## Installation des dépendances
 
-Pour exécuter les tests, assurez-vous d'avoir installé les dépendances nécessaires :
+Pour exécuter les tests, commencez par installer les dépendances nécessaires :
 
 ```bash
-npm install
+npm install npm install --save-dev @babel/plugin-transform-modules-commonjs
 ```
 
 ## Exécution des tests
