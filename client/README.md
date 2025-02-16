@@ -82,6 +82,51 @@ React 18
 └── CSS Modules (styles)
 ```
 
+---
+
+# Tests et Couverture
+
+## Installation des dépendances
+
+Pour exécuter les tests, assurez-vous d'avoir installé les dépendances nécessaires :
+
+```bash
+npm install
+```
+
+## Exécution des tests
+
+Pour lancer les tests, utilisez la commande :
+
+```bash
+npm test
+```
+
+## Couverture des tests
+
+Cette suite de tests couvre les aspects suivants :
+
+- **Authentification** (succès/échec)
+- **Gestion des cartes** (affichage/mise à jour)
+- **Flux complet du quiz**
+- **Navigation entre les pages**
+- **Gestion du contexte d'authentification**
+- **Interactions API simulées**
+- **Gestion des erreurs**
+
+## Technologies et outils utilisés
+
+Les tests utilisent :
+
+- **Jest** pour l'exécution et les assertions
+- **React Testing Library** pour le rendu des composants
+- **Mocking des appels API** pour isoler les tests
+- **Tests asynchrones** pour les opérations réseau
+- **Simulation d'interactions utilisateur** réalistes
+
+---
+
+
 ## 📜 Bonnes pratiques
 
 ### 🔹 SOLID
